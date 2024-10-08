@@ -111,7 +111,7 @@
                     cursor: pointer;
                     a {
                         display: block;
-                        padding: 0 40px;
+                        padding: 0 30px;
                         height: 40px;
                         line-height: 40px;
                         &:hover,

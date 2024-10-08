@@ -1,0 +1,60 @@
+.fr-collapse {
+    --fr-collapse-border-color: var(--fr-border-color-light);
+    --fr-collapse-header-height: 48px;
+    --fr-collapse-header-bg-color: var(--fr-fill-color-blank);
+    --fr-collapse-header-text-color: var(--fr-text-color-primary);
+    --fr-collapse-header-font-size: 13px;
+    --fr-collapse-content-bg-color: var(--fr-fill-color-blank);
+    --fr-collapse-content-font-size: 13px;
+    --fr-collapse-content-text-color: var(--fr-text-color-primary);
+    --fr-collapse-disabled-text-color: var(--fr-disabled-text-color);
+    --fr-collapse-disabled-border-color: var(--fr-border-color-lighter);
+    border-top: 1px solid var(--fr-collapse-border-color);
+    border-bottom: 1px solid var(--fr-collapse-border-color);
+}
+.fr-collapse-item__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--fr-collapse-header-height);
+    line-height: var(--fr-collapse-header-height);
+    background-color: var(--fr-collapse-header-bg-color);
+    color: var(--fr-collapse-header-text-color);
+    cursor: pointer;
+    font-size: var(--fr-collapse-header-font-size);
+    font-weight: 500;
+    transition: border-bottom-color var(--fr-transition-duration);
+    outline: none;
+    border-bottom: 1px solid var(--fr-collapse-border-color);
+    padding: 0 10px;
+    &.is-disabled {
+        color: var(--fr-collapse-disabled-text-color);
+        cursor: not-allowed;
+        background-image: none;
+    }
+    &.is-active {
+        border-bottom-color: transparent;
+        .header-angle {
+            transform: rotate(90deg);
+        }
+    }
+    .header-angle {
+      transition: transform var(--fr-transition-duration);
+    }
+}
+.fr-collapse-item__content {
+    will-change: height;
+    background-color: var(--fr-collapse-content-bg-color);
+    overflow: hidden;
+    box-sizing: border-box;
+    font-size: var(--fr-collapse-content-font-size);
+    color: var(--fr-collapse-content-text-color);
+    border-bottom: 1px solid var(--fr-collapse-border-color);
+    /* padding-bottom: 25px; */
+    padding: 10px 10px 20px;
+}
+.slide-enter-active, .slide-leave-active {
+    transition: height var(--fr-transition-duration);
+}
+  
+  

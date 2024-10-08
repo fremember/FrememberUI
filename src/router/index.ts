@@ -46,9 +46,9 @@ const routes: Array<RouteRecordRaw> = [
                     component: () => import('@/views/comp/basic/button/index.vue')
                 },
                 {
-                    path: '/comp/message',
-                    name: 'Message',
-                    component: () => import('@/views/comp/basic/message/index.vue')
+                    path: '/comp/collapse',
+                    name: 'Collapse',
+                    component: () => import('@/views/comp/basic/collapse/index.vue')
                 }
             ]
         },

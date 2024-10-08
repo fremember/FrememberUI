@@ -1,24 +1,24 @@
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
-   --fr-c-white: #ffffff;
-   --fr-c-white-soft: #f8f8f8;
-   --fr-c-white-mute: #f2f2f2;
+   --fr-color-white: #ffffff;
+   --fr-color-white-soft: #f8f8f8;
+   --fr-color-white-mute: #f2f2f2;
   
-   --fr-c-black: #181818;
-   --fr-c-black-soft: #222222;
-   --fr-c-black-mute: #282828;
+   --fr-color-black: #181818;
+   --fr-color-black-soft: #222222;
+   --fr-color-black-mute: #282828;
   
-   --fr-c-indigo: #2c3e50;
+   --fr-color-indigo: #2c3e50;
   
-   --fr-c-divider-light-1: rgba(60, 60, 60, 0.29);
-   --fr-c-divider-light-2: rgba(60, 60, 60, 0.12);
-   --fr-c-divider-dark-1: rgba(84, 84, 84, 0.65);
-   --fr-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+   --fr-color-divider-light-1: rgba(60, 60, 60, 0.29);
+   --fr-color-divider-light-2: rgba(60, 60, 60, 0.12);
+   --fr-color-divider-dark-1: rgba(84, 84, 84, 0.65);
+   --fr-color-divider-dark-2: rgba(84, 84, 84, 0.48);
   
-   --fr-c-text-light-1: var(--vt-c-indigo);
-   --fr-c-text-light-2: rgba(60, 60, 60, 0.66);
-   --fr-c-text-dark-1: var(--vt-c-white);
-   --fr-c-text-dark-2: rgba(235, 235, 235, 0.64);
+   --fr-color-text-light-1: var(--vt-c-indigo);
+   --fr-color-text-light-2: rgba(60, 60, 60, 0.66);
+   --fr-color-text-dark-1: var(--vt-c-white);
+   --fr-color-text-dark-2: rgba(235, 235, 235, 0.64);
 }
   
 /* semantic color variables for this project */
@@ -73,15 +73,15 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 .router-link-active {
-    color: var(--fr-color-primary);
+    color: var(--fr-colorolor-primary);
 }
 
 .keyword-color {
-    color: var(--fr-color-keyword);
+    color: var(--fr-colorolor-keyword);
 }
 .tag-color {
-    color: var(--fr-color-tag);
+    color: var(--fr-colorolor-tag);
 }
 .attr-color {
-    color: var(--fr-color-attr);
+    color: var(--fr-colorolor-attr);
 }

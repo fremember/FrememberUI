@@ -15,6 +15,32 @@
     --fr-button-outline-color: var(--fr-color-primary-light-5);
     --fr-button-active-color: var(--fr-text-color-primary);
 }
+@each $val in primary,success,warning,info,danger {
+    .fr-button--$(val) {
+        --fr-button-text-color: var(--fr-color-white);
+        --fr-button-bg-color: var(--fr-color-$(val));
+        --fr-button-border-color: var(--fr-color-$(val));
+        --fr-button-outline-color: var(--fr-color-$(val)-light-5);
+        --fr-button-active-color: var(--fr-color-$(val)-dark-2);
+        --fr-button-hover-text-color: var(--fr-color-white);
+        --fr-button-hover-bg-color: var(--fr-color-$(val)-light-3);
+        --fr-button-hover-border-color: var(--fr-color-$(val)-light-3);
+        --fr-button-active-bg-color: var(--fr-color-$(val)-dark-2);
+        --fr-button-active-border-color: var(--fr-color-$(val)-dark-2);
+        --fr-button-disabled-text-color: var(--fr-color-white);
+        --fr-button-disabled-bg-color: var(--fr-color-$(val)-light-5);
+        --fr-button-disabled-border-color: var(--fr-color-$(val)-light-5);
+    }
+    .fr-button--$(val).is-plain {
+        --fr-button-text-color: var(--fr-color-$(val));
+        --fr-button-bg-color: var(--fr-color-$(val)-light-9);
+        --fr-button-border-color: var(--fr-color-$(val)-light-5);
+        --fr-button-hover-text-color: var(--fr-color-white);
+        --fr-button-hover-bg-color: var(--fr-color-$(val));
+        --fr-button-hover-border-color: var(--fr-color-$(val));
+        --fr-button-active-text-color: var(--fr-color-white);
+    }
+}
 .fr-button {
     display: inline-flex;
     justify-content: center;
@@ -54,6 +80,9 @@
         background-color: var(--fr-button-active-bg-color);
         outline: none;
     }
+    /*disabled*/
+    
+    /* plain */
     &.is-plain {
         --fr-button-hover-text-color: var(--fr-color-primary);
         --fr-button-hover-bg-color: var(--fr-fill-color-blank);
@@ -69,7 +98,10 @@
         /* padding: 8px; */
         width: 32px;
     }
-    /*disabled*/
+    [class*=fr-icon] + span {
+        margin-left: 6px;
+    }
+
     &.is-disabled, &.is-disabled:hover, &.is-disabled:focus, 
     &[disabled], &[disabled]:hover, &[disabled]:focus 
     {
@@ -79,36 +111,8 @@
         background-color: var(--fr-button-disabled-bg-color);
         border-color: var(--fr-button-disabled-border-color);
     }
-    [class*=fr-icon] + span {
-        margin-left: 6px;
-    }
 }
-@each $val in primary,success,warning,info,danger {
-    .fr-button--$(val) {
-        --fr-button-text-color: var(--fr-color-white);
-        --fr-button-bg-color: var(--fr-color-$(val));
-        --fr-button-border-color: var(--fr-color-$(val));
-        --fr-button-outline-color: var(--fr-color-$(val)-light-5);
-        --fr-button-active-color: var(--fr-color-$(val)-dark-2);
-        --fr-button-hover-text-color: var(--fr-color-white);
-        --fr-button-hover-bg-color: var(--fr-color-$(val)-light-3);
-        --fr-button-hover-border-color: var(--fr-color-$(val)-light-3);
-        --fr-button-active-bg-color: var(--fr-color-$(val)-dark-2);
-        --fr-button-active-border-color: var(--fr-color-$(val)-dark-2);
-        --fr-button-disabled-text-color: var(--fr-color-white);
-        --fr-button-disabled-bg-color: var(--fr-color-$(val)-light-5);
-        --fr-button-disabled-border-color: var(--fr-color-$(val)-light-5);
-    }
-    .fr-button--$(val).is-plain {
-        --fr-button-text-color: var(--fr-color-$(val));
-        --fr-button-bg-color: var(--fr-color-$(val)-light-9);
-        --fr-button-border-color: var(--fr-color-$(val)-light-5);
-        --fr-button-hover-text-color: var(--fr-color-white);
-        --fr-button-hover-bg-color: var(--fr-color-$(val));
-        --fr-button-hover-border-color: var(--fr-color-$(val));
-        --fr-button-active-text-color: var(--fr-color-white);
-    }
-}
+
 .fr-button--large {
     --fr-button-size: 40px;
     height: var(--fr-button-size);

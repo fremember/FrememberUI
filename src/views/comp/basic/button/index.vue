@@ -77,6 +77,15 @@
             <div class="card-info">通过 round、plain 属性将按钮设置为圆角、朴素按钮</div>
             <div class="card-cont">
                 <fr-button round plain v-for="btn in btns" :key="btn.text" :type="btn.type">{{ btn.text }}</fr-button>
+<pre v-pre>
+<code>
+&lt;<span class="tag-color">fr-button</span> <span class="attr-color">round</span> <span class="attr-color">plain</span> &gt;Default&lt;/<span class="tag-color">fr-button</span>&gt;
+&lt;<span class="tag-color">fr-button</span> <span class="attr-color">round</span> <span class="attr-color">plain</span> <span class="attr-color">type</span>="<span style="color: var(--fr-color-primary)">primary</span>"&gt;Primary&lt;/<span class="tag-color">fr-button</span>&gt;
+&lt;<span class="tag-color">fr-button</span> <span class="attr-color">round</span> <span class="attr-color">plain</span> <span class="attr-color">type</span>="<span style="color: var(--fr-color-success)">success</span>"&gt;Success&lt;/<span class="tag-color">fr-button</span>&gt;
+&lt;<span class="tag-color">fr-button</span> <span class="attr-color">round</span> <span class="attr-color">plain</span> <span class="attr-color">type</span>="<span style="color: var(--fr-color-info)">info</span>"&gt;Info&lt;/<span class="tag-color">fr-button</span>&gt;
+&lt;<span class="tag-color">fr-button</span> <span class="attr-color">round</span> <span class="attr-color">plain</span> <span class="attr-color">type</span>="<span style="color: var(--fr-color-warning)">warning</span>"&gt;Warning&lt;/<span class="tag-color">fr-button</span>&gt;
+&lt;<span class="tag-color">fr-button</span> <span class="attr-color">round</span> <span class="attr-color">plain</span> <span class="attr-color">type</span>="<span style="color: var(--fr-color-danger)">danger</span>"&gt;Danger&lt;/<span class="tag-color">fr-button</span>&gt;
+</code></pre>
             </div>
         </div>
         <div class="card">
@@ -84,11 +93,54 @@
             <div class="card-info">通过 circle、plain 属性将按钮设置为圆形、朴素按钮</div>
             <div class="card-cont">
                 <fr-button circle plain v-for="btn in btns" :key="btn.text" :type="btn.type">{{ btn.text.substr(0, 1) }}</fr-button>
+<pre v-pre>
+<code>
+&lt;<span class="tag-color">fr-button</span> <span class="attr-color">circle</span> <span class="attr-color">plain</span> &gt;Default&lt;/<span class="tag-color">fr-button</span>&gt;
+&lt;<span class="tag-color">fr-button</span> <span class="attr-color">circle</span> <span class="attr-color">plain</span> <span class="attr-color">type</span>="<span style="color: var(--fr-color-primary)">primary</span>"&gt;Primary&lt;/<span class="tag-color">fr-button</span>&gt;
+&lt;<span class="tag-color">fr-button</span> <span class="attr-color">circle</span> <span class="attr-color">plain</span> <span class="attr-color">type</span>="<span style="color: var(--fr-color-success)">success</span>"&gt;Success&lt;/<span class="tag-color">fr-button</span>&gt;
+&lt;<span class="tag-color">fr-button</span> <span class="attr-color">circle</span> <span class="attr-color">plain</span> <span class="attr-color">type</span>="<span style="color: var(--fr-color-info)">info</span>"&gt;Info&lt;/<span class="tag-color">fr-button</span>&gt;
+&lt;<span class="tag-color">fr-button</span> <span class="attr-color">circle</span> <span class="attr-color">plain</span> <span class="attr-color">type</span>="<span style="color: var(--fr-color-warning)">warning</span>"&gt;Warning&lt;/<span class="tag-color">fr-button</span>&gt;
+&lt;<span class="tag-color">fr-button</span> <span class="attr-color">circle</span> <span class="attr-color">plain</span> <span class="attr-color">type</span>="<span style="color: var(--fr-color-danger)">danger</span>"&gt;Danger&lt;/<span class="tag-color">fr-button</span>&gt;
+</code></pre>
             </div>
         </div>
+        <div class="card">
+            <div class="card-title">禁用按钮</div>
+            <div class="card-info">通过 disabled 属性设置按钮为禁用状态，禁用状态按钮不可点击；还可以同时设置 circle/round、plain 属性设置不同的禁用按钮</div>
+            <div class="card-cont">
+                <div style="margin-bottom: 10px;"><fr-button disabled v-for="btn in btns" :key="btn.text" :type="btn.type">{{ btn.text }}</fr-button></div>
+                <div style="margin-bottom: 10px;"><fr-button disabled round v-for="btn in btns" :key="btn.text" :type="btn.type">{{ btn.text }}</fr-button></div>
+                <div style="margin-bottom: 10px;"><fr-button disabled circle v-for="btn in btns" :key="btn.text" :type="btn.type">{{ btn.text.substr(0, 1) }}</fr-button></div>
+                <!-- <div style="margin-bottom: 10px;"><fr-button disabled plain v-for="btn in btns" :key="btn.text" :type="btn.type">{{ btn.text }}</fr-button></div> -->
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-title">图标按钮</div>
+            <div class="card-info">按钮的内容是 图标</div>
+            <div class="card-cont">待开发</div>
+        </div>
+
         <h3>API</h3>
         <div class="card">
             <div class="title">Props</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>属性名</th>
+                        <th>说明</th>
+                        <th>类型</th>
+                        <th>默认值</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(info, index) in propsInfo" :key="index">
+                        <td>{{ info.name }}</td>
+                        <td>{{ info.desc }}</td>
+                        <td>{{ info.type }}</td>
+                        <td>{{ info.default || '--' }}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
         <div class="card">
             <div class="title">Events</div>
@@ -135,6 +187,15 @@
         { type: 'info', text: 'Info'},
         { type: 'warning', text: 'Warning'},
         { type: 'danger', text: 'Danger'}
+    ])
+    const propsInfo = ref<any[]>([
+        { name: 'type', desc: '不同的样式', type: 'string', default: '' },
+        { name: 'plain', desc: '是否为朴素按钮的标识', type: 'boolean', default: 'false' },
+        { name: 'round', desc: '是否为圆角按钮的标识', type: 'boolean', default: 'false' },
+        { name: 'circle', desc: '是否为圆形按钮的标识，适合图标按钮', type: 'boolean', default: 'false' },
+        { name: 'size', desc: '不同大小(small、normal、large)', type: 'string', default: 'normal' },
+        { name: 'disabled', desc: '是否禁用按钮标识', type: 'boolean', default: 'false' },
+        { name: 'loading', desc: '按钮loading状态', type: 'boolean', default: 'false' }
     ])
 
 </script>

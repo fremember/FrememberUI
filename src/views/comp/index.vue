@@ -18,8 +18,8 @@
                     children: []
                 },
                 {
-                    title: 'Message 消息',
-                    url: '/comp/message',
+                    title: 'Collapse 折叠面板',
+                    url: '/comp/collapse',
                     id: 212,
                     children: []
                 }
