@@ -1,0 +1,17 @@
+.fr-icon {
+    --fr-icon-color: inherit;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    fill: currentColor;
+    color: var(--fr-icon-color);
+    font-size: inherit;
+  }
+  
+  @each $val in primary,info,success,warning,danger {
+    .fr-icon--$(val) {
+      --fr-icon-color: var(--fr-color-$(val));
+    }
+  }
+  

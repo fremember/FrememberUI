@@ -12,7 +12,7 @@
         </header>
 
         <section class="container">
-            <nav>
+            <nav v-if="menus.length">
                 <div style="background: #f4f8fa;height: 100px;">轮播图留位置</div>
                 <div v-for="menu in menus" :key="menu.id">
                     <div class="title">{{ menu.title }}</div>
@@ -45,7 +45,8 @@
     const subMenus = reactive<any[]>([
         { title: '文档', id: 1, url: '/document' },
         { title: '组件', id: 2, url: '/comp' },
-        { title: '面试', id: 3, url: '/interview' }
+        { title: '面试', id: 3, url: '/interview' },
+        { title: '简历', id: 4, url: '/resume' }
     ])
 </script>
 

@@ -49,6 +49,11 @@ const routes: Array<RouteRecordRaw> = [
                     path: '/comp/collapse',
                     name: 'Collapse',
                     component: () => import('@/views/comp/basic/collapse/index.vue')
+                },
+                {
+                    path: '/comp/icon',
+                    name: 'Icon',
+                    component: () => import('@/views/comp/basic/icon/index.vue')
                 }
             ]
         },
@@ -58,13 +63,29 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/interview/index.vue'),
             children: [
                 {
-                    path: 'interview',
+                    path: '/interview',
                     redirect: '/interview/js'
                 },
                 {
-                    path: '/interview/button',
+                    path: '/interview/js',
                     name: 'Js',
                     component: () => import('@/views/interview/js/index.vue'),
+                }
+            ]
+        },
+        {
+            path: '/resume',
+            name: 'Resume',
+            component: () => import('@/views/resume/index.vue'),
+            children: [
+                {
+                    path: '/resume',
+                    redirect: '/resume/fremember'
+                },
+                {
+                    path: '/resume/fremember',
+                    name: 'Fremember',
+                    component: () => import('@/views/resume/fremember/index.vue'),
                 }
             ]
         }

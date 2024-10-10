@@ -39,7 +39,7 @@
         }
     }
     .header-angle {
-      transition: transform var(--fr-transition-duration);
+        transition: transform var(--fr-transition-duration);
     }
 }
 .fr-collapse-item__content {

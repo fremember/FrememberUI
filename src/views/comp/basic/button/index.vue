@@ -116,8 +116,35 @@
         </div>
         <div class="card">
             <div class="card-title">图标按钮</div>
-            <div class="card-info">按钮的内容是 图标</div>
-            <div class="card-cont">待开发</div>
+            <div class="card-info">通过 icon 设置按钮的图标内容</div>
+            <div class="card-cont">
+                <fr-button circle plain v-for="btn in btns" :key="btn.text" :type="btn.type" icon="fa-user-secret"></fr-button>
+<pre v-pre>
+<code>
+&lt;<span class="tag-color">fr-button</span> <span class="attr-color">circle</span> <span class="attr-color">plain</span> <span class="attr-color">icon</span>="<span>fa-user-secret</span>"&gt;Default&lt;/<span class="tag-color">fr-button</span>&gt;
+&lt;<span class="tag-color">fr-button</span> <span class="attr-color">circle</span> <span class="attr-color">plain</span> <span class="attr-color">type</span>="<span style="color: var(--fr-color-primary)">primary</span>" <span class="attr-color">icon</span>="<span>fa-user-secret</span>"&gt;Primary&lt;/<span class="tag-color">fr-button</span>&gt;
+&lt;<span class="tag-color">fr-button</span> <span class="attr-color">circle</span> <span class="attr-color">plain</span> <span class="attr-color">type</span>="<span style="color: var(--fr-color-success)">success</span>" <span class="attr-color">icon</span>="<span>fa-user-secret</span>"&gt;Success&lt;/<span class="tag-color">fr-button</span>&gt;
+&lt;<span class="tag-color">fr-button</span> <span class="attr-color">circle</span> <span class="attr-color">plain</span> <span class="attr-color">type</span>="<span style="color: var(--fr-color-info)">info</span>" <span class="attr-color">icon</span>="<span>fa-user-secret</span>"&gt;Info&lt;/<span class="tag-color">fr-button</span>&gt;
+&lt;<span class="tag-color">fr-button</span> <span class="attr-color">circle</span> <span class="attr-color">plain</span> <span class="attr-color">type</span>="<span style="color: var(--fr-color-warning)">warning</span>" <span class="attr-color">icon</span>="<span>fa-user-secret</span>"&gt;Warning&lt;/<span class="tag-color">fr-button</span>&gt;
+&lt;<span class="tag-color">fr-button</span> <span class="attr-color">circle</span> <span class="attr-color">plain</span> <span class="attr-color">type</span>="<span style="color: var(--fr-color-danger)">danger</span>" <span class="attr-color">icon</span>="<span>fa-user-secret</span>"&gt;Danger&lt;/<span class="tag-color">fr-button</span>&gt;
+</code></pre>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-title">loading按钮</div>
+            <div class="card-info">按钮的加载状态</div>
+            <div class="card-cont">
+                <fr-button plain v-for="btn in btns" :key="btn.text" :type="btn.type" loading>loading</fr-button>
+<pre v-pre>
+<code>
+&lt;<span class="tag-color">fr-button</span> <span class="attr-color">loading</span>&gt;Default loading&lt;/<span class="tag-color">fr-button</span>&gt;
+&lt;<span class="tag-color">fr-button</span> <span class="attr-color">loading</span> <span class="attr-color">type</span>="<span style="color: var(--fr-color-primary)">primary</span>"&gt;Primary loading&lt;/<span class="tag-color">fr-button</span>&gt;
+&lt;<span class="tag-color">fr-button</span> <span class="attr-color">loading</span> <span class="attr-color">type</span>="<span style="color: var(--fr-color-success)">success</span>"&gt;Success loading&lt;/<span class="tag-color">fr-button</span>&gt;
+&lt;<span class="tag-color">fr-button</span> <span class="attr-color">loading</span> <span class="attr-color">type</span>="<span style="color: var(--fr-color-info)">info</span>"&gt;Info loading&lt;/<span class="tag-color">fr-button</span>&gt;
+&lt;<span class="tag-color">fr-button</span> <span class="attr-color">loading</span> <span class="attr-color">type</span>="<span style="color: var(--fr-color-warning)">warning</span>"&gt;Warning loading&lt;/<span class="tag-color">fr-button</span>&gt;
+&lt;<span class="tag-color">fr-button</span> <span class="attr-color">loading</span> <span class="attr-color">type</span>="<span style="color: var(--fr-color-danger)">danger</span>"&gt;Danger loading&lt;/<span class="tag-color">fr-button</span>&gt;
+</code></pre>
+            </div>
         </div>
 
         <h3>API</h3>
@@ -171,6 +198,7 @@
 <script lang="ts" setup>
     import { onMounted, ref } from 'vue'
     import FrButton from '@/components/Button/Button.vue'
+    // import FrIcon from '@/components/Icon/Icon.vue'
     // import { ButtonInstance } from '@/components/Button/types'
 
     // const buttonRef = ref<ButtonInstance | null>(null)

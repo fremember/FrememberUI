@@ -15,6 +15,7 @@
             @click="handleClick"
         >
             <slot name="title">{{ title }}</slot>
+            <fr-icon icon="angle-right" class="header-angle" />
         </div>
         <Transition name="slide" v-on="transitionEvents">
             <div class="fr-collapse-item__wrapper" v-show="isActive">
@@ -27,6 +28,7 @@
 </template>
 <script lang="ts" setup>
     import { inject, computed } from 'vue'
+    import FrIcon from '@/components/Icon/Icon.vue'
     import type { CollapseItemProps, CollapseContext } from './types'
     import { collapseContextKey } from './types'
     defineOptions({

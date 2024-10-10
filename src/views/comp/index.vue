@@ -22,6 +22,12 @@
                     url: '/comp/collapse',
                     id: 212,
                     children: []
+                },
+                {
+                    title: 'Icon 图标',
+                    url: '/comp/icon',
+                    id: 213,
+                    children: []
                 }
             ]
         },
@@ -34,12 +40,6 @@
                     title: 'swiper 使用',
                     url: '/comp/button',
                     id: 221,
-                    children: []
-                },
-                {
-                    title: 'Message 消息',
-                    url: '/comp/message',
-                    id: 222,
                     children: []
                 }
             ]

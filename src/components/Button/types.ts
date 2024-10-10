@@ -1,4 +1,3 @@
-
 export type ButtonType = 'primary' | 'success' | 'warning' | 'danger' | 'info'
 export type ButtonSize = 'small' | 'normal' | 'large'
 export type NativeType = 'button' | 'submit' | 'reset'
@@ -13,6 +12,7 @@ export interface ButtonProps {
     loading?: boolean;
     nativeType?: NativeType;
     autofocus?: boolean;
+    icon?: string;
 }
 // 使用
 // import { ButtonProps } from './types'

@@ -11,11 +11,13 @@
             'is-disabled': disabled,
             'is-loading': loading
         }"
-        :disabled="disabled"
+        :disabled="disabled || loading"
         :autofocus="autofocus"
         :type="nativeType"
     >
-        <span>
+        <fr-icon icon="spinner" spin v-if="loading" />
+        <fr-icon :icon="icon" v-if="icon" />
+        <span v-if="slotDefault">
             <slot />
         </span>
     </button>
@@ -31,7 +33,8 @@
  * 图标
  * loading 按钮loading状态
  */
-import { ref } from 'vue'
+import { ref, useSlots } from 'vue'
+import FrIcon from '@/components/Icon/Icon.vue'
 import { ButtonProps } from './types'
 defineOptions({
     name: 'FrButton'
@@ -39,6 +42,9 @@ defineOptions({
 withDefaults(defineProps<ButtonProps>(), {
     nativeType: 'button'
 })
+
+const slotDefault = !!useSlots().default;
+
 const _ref = ref<HTMLButtonElement>()
 defineExpose({
     ref: _ref
